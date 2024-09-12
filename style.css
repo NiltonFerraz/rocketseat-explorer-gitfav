@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: "Roboto", sans-serif;
+    --text-color: #E1E1E6;
+
+    --back-button: #065E7C;
+    --back-input: #06181C;
+
+    --hue: 194;
+    /* --primary-color: hsl(var(var(--hue)), 72, 13, 100%) */
+    --primary-color: #092D38;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: #000000;
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#app {
+    padding: 2rem;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 2.5rem 0;
+    margin-bottom: 8.7rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.search input {
+    height: 4.8rem;
+    width: 46.2rem;
+    border: none;
+    border-radius: .5rem;
+    padding: 0 1.6rem;
+    background: var(--back-input);
+    color: #7C7C8A;
+}
+
+.search button {
+    background-color: var(--back-button);
+    border-radius: .5rem;
+    height: 4.8rem;
+    width: 17rem;
+    border: none;
+    padding: 0 1rem;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    cursor: pointer;
+    padding: .8rem;
+    /* gap: .4rem; */
+
+}
+
+.search button:hover {
+    background-color: #FFFFFF;
+    color: #065E7C;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #4A808C;
+    border-radius: 1.2rem;
+    max-height: 59rem;
+    min-width: 85rem;
+    position: relative;
+    display: block;
+    overflow-x: auto;
+    border-spacing: 0;
+    margin: 0;
+    /* border-collapse: collapse; */
+
+    /* box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, .3); */
+    overflow: hidden;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table * {
+    font-size: 2rem;
+    color: var(--text-color);
+
+    font-family: var(--ff-primary);
+    text-decoration: none;
+    line-height: 160%;
+}
+
+table th {
+    width: 100%;
+    background: var(--primary-color);
+    text-align: left;
+    font-weight: normal;
+    padding: 1.6rem 4.8rem;
+
+    /* border: none; */
+    position: sticky;
+    /* top: 0; */
+    /* gap: 1.6rem; */
+}
+
+table th:first-child {
+    /* border-top-left-radius: .4rem; */
+}
+
+table th:last-child {
+    /* border-top-right-radius: .4rem; */
+}
+
+table tr:nth-child(even) {
+    border: 1px solid #4A808C;
+    background: #06181C;
+}
+
+table tr:nth-child(odd) {
+    border: 1px solid #4A808C;
+    background: rgba(6, 22, 27, 0.5);
+}
+
+table td {
+    padding: 3rem;
+    text-align: left;
+    width: 100%;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    height: 10.9rem;
+    min-width: 40rem;
+    justify-content: left;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    background: none;
+    border: none;
+    color: red;
+
+    cursor: pointer;
+}
+
+thead,
+tbody {
+    display: block;
+    /* width: 100%; */
+}
+
+tbody {
+    /* width: 100%; */
+    max-height: 35rem;
+    /* max-width: 100%; */
+    overflow-y: auto;
+    /* position: fixed;  */
+
+}
+
+tbody::-webkit-scrollbar {
+    width: .6rem;
+    height: 12.2rem;
+}
+
+tbody::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+    background-color: #4A808C;
+    /*color of the scroll thumb */
+    border-radius: .5rem;
+    /* roundness of the scroll thumb */
+    /* border: 3px solid orange;  creates padding around scroll thumb */
+}
+
+th,
+td {
+    border-bottom: 1px solid#4A808C;
+    /* padding: 50px; */
+}
